@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MoviesIndex from '../components/MoviesIndex'
+import FormContainer from './FormContainer'
 
 class MoviesContainer extends Component {
   constructor(props) {
@@ -8,6 +9,49 @@ class MoviesContainer extends Component {
     this.state = {
       movies: []
     }
+    this.addNewMovie = this.addNewMovie.bind(this)
+  }
+
+  addNewMovie(moviePayload) {
+    fetch('/api/v1/movies', {
+      method: 'POST',
+      body: JSON.stringify(moviePayload),
+      credentials: 'same-origin'
+    })
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+           error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+     .then(response => response.json())
+     .then(body => {
+       // debugger
+       let newMovies = this.state.movies.concat(body)
+       this.setState({movies: newMovies})
+      })
+     .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  componentDidMount() {
+    fetch('/api/v1/movies')
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+           error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+     .then(response => response.json())
+     .then(body => {
+       this.setState({movies: body.movies})
+      })
+     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render() {
@@ -17,6 +61,9 @@ class MoviesContainer extends Component {
         <hr />
         <MoviesIndex
           movies={this.state.movies}
+        />
+        <FormContainer
+          addNewMovie={this.addNewMovie}
         />
       </div>
     )

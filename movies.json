@@ -29,6 +29,36 @@
       "title": "The Aristocats",
       "release_year": 1970,
       "runtime": 78
+    },
+    {
+      "title": "The Matrix",
+      "release_year": 1999,
+      "runtime": 180,
+      "id": 6
+    },
+    {
+      "title": "Ladybird",
+      "release_year": 2018,
+      "runtime": 150,
+      "id": 7
+    },
+    {
+      "title": "Moana",
+      "release_year": 2016,
+      "runtime": 120,
+      "id": 8
+    },
+    {
+      "title": "Zoolander",
+      "release_year": 2001,
+      "runtime": 150,
+      "id": 9
+    },
+    {
+      "title": "Zootopia",
+      "release_year": 2010,
+      "runtime": 120,
+      "id": 10
     }
   ]
 }
