@@ -10,23 +10,28 @@ class FormContainer extends Component {
       movieYear: ""
     };
 
-    this.handleTitleChange = this.handleTitleChange.bind(this)
-    this.handleRuntimeChange = this.handleRuntimeChange.bind(this)
-    this.handleYearChange = this.handleYearChange.bind(this)
+    // this.handleTitleChange = this.handleTitleChange.bind(this)
+    // this.handleRuntimeChange = this.handleRuntimeChange.bind(this)
+    // this.handleYearChange = this.handleYearChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.clearForm = this.clearForm.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleTitleChange(event) {
-    this.setState({movieTitle: event.target.value})
-  }
+  // handleTitleChange(event) {
+  //   this.setState({movieTitle: event.target.value})
+  // }
+  //
+  // handleRuntimeChange(event) {
+  //   this.setState({movieRuntime: event.target.value})
+  // }
+  //
+  // handleYearChange(event) {
+  //   this.setState({movieYear: event.target.value})
+  // }
 
-  handleRuntimeChange(event) {
-    this.setState({movieRuntime: event.target.value})
-  }
-
-  handleYearChange(event) {
-    this.setState({movieYear: event.target.value})
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value})
   }
 
   handleSubmit(event) {
@@ -63,19 +68,19 @@ class FormContainer extends Component {
             label="Movie Title"
             name="movieTitle"
             value={this.state.movieTitle}
-            handleChange={this.handleTitleChange}
+            handleChange={this.handleChange}
           />
           <InputField
             label="Movie Runtime"
             name="movieRuntime"
             value={this.state.movieRuntime}
-            handleChange={this.handleRuntimeChange}
+            handleChange={this.handleChange}
           />
           <InputField
             label="Movie Year"
             name="movieYear"
             value={this.state.movieYear}
-            handleChange={this.handleYearChange}
+            handleChange={this.handleChange}
           />
           <input type="submit" className="button" />
         </form>

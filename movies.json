@@ -59,6 +59,12 @@
       "release_year": 2010,
       "runtime": 120,
       "id": 10
+    },
+    {
+      "title": "Bug's Life",
+      "release_year": 1998,
+      "runtime": 120,
+      "id": 11
     }
   ]
 }
