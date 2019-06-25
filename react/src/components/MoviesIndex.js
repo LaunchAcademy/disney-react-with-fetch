@@ -2,7 +2,6 @@ import React from 'react';
 import MovieTile from './MovieTile'
 
 const MoviesIndex = props => {
-
   let movies = props.movies.map(movie => {
     return(
       <MovieTile
