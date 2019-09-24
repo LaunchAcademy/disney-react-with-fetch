@@ -11,8 +11,9 @@ const MoviesIndex = props => {
       />
     )
   })
+
   return(
-    <ul>
+    <ul className="list">
       {movies}
     </ul>
   );

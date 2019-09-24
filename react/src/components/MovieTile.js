@@ -6,7 +6,7 @@ const MovieTile = props => {
   let text = textArray.join(" - ")
 
   return(
-    <li>{text}</li>
+    <li className="tile">{text}</li>
   )
 }
 
