@@ -35,6 +35,37 @@
       "title": "The Great Mouse Detective",
       "release_year": 1986,
       "runtime": 74
+    },
+    {
+      "title": "Monsters",
+      "releaseYear": "2002",
+      "runtime": "87",
+      "id": 7
+    },
+    {
+      "title": "monsters univ",
+      "releaseYear": "2013",
+      "runtime": "45",
+      "release_year": "2013",
+      "id": 8
+    },
+    {
+      "title": "Monsters phd",
+      "release_year": "2022",
+      "runtime": "120",
+      "id": 9
+    },
+    {
+      "title": "monsters fellowship",
+      "release_year": "2024",
+      "runtime": "200",
+      "id": 10
+    },
+    {
+      "title": "Monster gets tenure",
+      "release_year": "2033",
+      "runtime": "500",
+      "id": 11
     }
   ]
 }

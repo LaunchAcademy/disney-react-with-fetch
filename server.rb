@@ -33,10 +33,8 @@ post "/api/v1/movies" do
 
   movie = JSON.parse(request.body.read)
   movie["id"] = current_movies["movies"].last["id"] + 1
-
   current_movies["movies"] << movie
   File.write("movies.json", JSON.pretty_generate(current_movies))
-
   content_type :json
   status 201
   json movie
