@@ -30,8 +30,8 @@ end
 
 post "/api/v1/movies" do
   current_movies = read_movies
-
   movie = JSON.parse(request.body.read)
+ 
   movie["id"] = current_movies["movies"].last["id"] + 1
 
   current_movies["movies"] << movie
