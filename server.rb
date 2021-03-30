@@ -21,7 +21,6 @@ end
 # API ENDPOINTS
 
 get "/api/v1/movies" do
-  # binding.pry
   movies = read_movies
 
   content_type :json

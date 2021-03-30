@@ -3,9 +3,9 @@ import './main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MoviesContainer from './containers/MoviesContainer';
+import MoviesApp from './components/MoviesApp';
 
 ReactDOM.render(
-  <MoviesContainer />,
+  <MoviesApp />,
   document.getElementById('app')
 )

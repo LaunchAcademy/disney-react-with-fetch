@@ -35,6 +35,30 @@
       "title": "The Great Mouse Detective",
       "release_year": 1986,
       "runtime": 74
+    },
+    {
+      "title": "Flubber",
+      "release_year": "1998",
+      "runtime": "120",
+      "id": 7
+    },
+    {
+      "title": "Oliver and Company",
+      "release_year": "1988",
+      "runtime": "120",
+      "id": 8
+    },
+    {
+      "title": "test",
+      "release_year": "4",
+      "runtime": "2",
+      "id": 9
+    },
+    {
+      "title": "moana",
+      "release_year": "2018",
+      "runtime": "123",
+      "id": 10
     }
   ]
 }
